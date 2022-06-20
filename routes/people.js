@@ -10,4 +10,6 @@ router.put('/:id', peopleController.update)
 
 router.post('/', peopleController.create)
 
+router.get('/:id', peopleController.show)
+
 module.exports = router

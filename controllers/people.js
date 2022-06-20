@@ -35,9 +35,18 @@ const create = async (req, res) => {
     }
 }
 
+const show = async (req,res) => {
+    try {
+        res.json(await Person.findById(req.params.id))
+    }catch(error){
+        res.status(400).json(error)
+    }
+}
+
 module.exports = {
     index,
     del,
     update,
-    create
+    create,
+    show
 }
